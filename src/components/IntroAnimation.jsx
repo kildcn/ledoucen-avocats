@@ -17,7 +17,7 @@ function IntroAnimation() {
   if (!visible) return null;
 
   return (
-    <div className="page-transition">
+    <div className="page-transition" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: 10000 }}>
       <div className="logo-animation">Le Doucen Avocats</div>
     </div>
   );

@@ -15,7 +15,7 @@ function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <header className={`transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`} style={{ position: 'fixed', width: '100%', top: 0, left: 0, right: 0, zIndex: 9999 }}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center">
           <h1 className={`text-2xl font-serif font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>
@@ -50,7 +50,7 @@ function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg py-4 animate-fadeIn">
+        <div className="md:hidden bg-white shadow-lg py-4 animate-fadeIn" style={{ position: 'relative', zIndex: 9999 }}>
           <div className="container mx-auto px-6 flex flex-col space-y-4">
             {['Accueil', 'Le Cabinet', 'Expertise', 'Équipe', 'Contact'].map((item, index) => (
               <a

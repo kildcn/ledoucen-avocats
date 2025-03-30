@@ -25,6 +25,15 @@ body {
   padding: 0;
 }
 
+/* Fix for header positioning - critical CSS here */
+header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+}
+
 /* Set headings to serif font */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Garamond', serif;
@@ -87,4 +96,19 @@ input:focus, textarea:focus {
 
 .font-sans {
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Add padding to top of hero section to prevent content from hiding under the header */
+#accueil {
+  padding-top: 0 !important;
+}
+
+/* Ensure the hero section spans full viewport height and starts right at the top */
+.app {
+  position: relative;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }

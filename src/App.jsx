@@ -33,17 +33,18 @@ function App() {
   return (
     <div className="app">
       <IntroAnimation />
-      <div className="animate-header">
+      {/* Using inline styles to ensure header is above other content */}
+      <div className="animate-header" style={{ position: 'relative', zIndex: 9999 }}>
         <Header />
       </div>
-      <main>
+      <main style={{ position: 'relative', zIndex: 1, marginTop: '0px', paddingTop: '0px' }}>
         <Hero />
         <About />
         <Services />
         <Team />
         <Contact />
       </main>
-      <Footer />
+      <Footer style={{ position: 'relative', zIndex: 1 }} />
     </div>
   );
 }

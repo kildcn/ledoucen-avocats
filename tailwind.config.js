@@ -27,6 +27,10 @@ export default {
           xl: '5rem',
         },
       },
+      zIndex: {
+        '100': '100',
+        '999': '999',
+      }
     },
   },
   plugins: [],
