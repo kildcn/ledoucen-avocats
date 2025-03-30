@@ -13,8 +13,19 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Source Sans Pro', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif'],
+      },
+      boxShadow: {
+        'elegant': '0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      },
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '4rem',
+          xl: '5rem',
+        },
       },
     },
   },

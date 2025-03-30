@@ -1,0 +1,216 @@
+/* src/animations.css */
+/* Main animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20px;
+  }
+}
+
+/* Initial loading animation */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e3a8a;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 0.5s ease-in-out 2s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+.logo-animation {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  font-weight: 700;
+}
+
+.logo-animation::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background-color: white;
+  animation: expandWidth 1.5s ease-in-out forwards;
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Animated elements */
+.animate-header {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 2.2s forwards;
+}
+
+.animate-hero-heading {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out 2.4s forwards;
+}
+
+.animate-hero-subheading {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out 2.6s forwards;
+}
+
+.animate-hero-divider {
+  opacity: 0;
+  animation: scaleIn 0.8s ease-in-out 2.8s forwards;
+}
+
+.animate-hero-text {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out 3s forwards;
+}
+
+.animate-hero-buttons {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out 3.2s forwards;
+}
+
+.animate-section-title {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.animate-section-divider {
+  opacity: 0;
+  animation: scaleIn 0.8s ease-in-out 0.2s forwards;
+}
+
+.animate-section-text {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-in-out 0.4s forwards;
+}
+
+.animate-card {
+  opacity: 0;
+  animation: scaleIn 0.8s ease-in-out forwards;
+}
+
+.stagger-animation > * {
+  opacity: 0;
+}
+
+.stagger-animation > *:nth-child(1) {
+  animation: fadeInUp 0.5s ease-in-out 0.1s forwards;
+}
+
+.stagger-animation > *:nth-child(2) {
+  animation: fadeInUp 0.5s ease-in-out 0.2s forwards;
+}
+
+.stagger-animation > *:nth-child(3) {
+  animation: fadeInUp 0.5s ease-in-out 0.3s forwards;
+}
+
+.stagger-animation > *:nth-child(4) {
+  animation: fadeInUp 0.5s ease-in-out 0.4s forwards;
+}
+
+.stagger-animation > *:nth-child(5) {
+  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+}
+
+.stagger-animation > *:nth-child(6) {
+  animation: fadeInUp 0.5s ease-in-out 0.6s forwards;
+}
+
+/* Animation trigger on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.animate-on-scroll.fade-in {
+  opacity: 1;
+}
+
+.animate-on-scroll.from-bottom {
+  transform: translateY(40px);
+}
+
+.animate-on-scroll.from-bottom.fade-in {
+  transform: translateY(0);
+}
+
+.animate-on-scroll.from-left {
+  transform: translateX(-40px);
+}
+
+.animate-on-scroll.from-left.fade-in {
+  transform: translateX(0);
+}
+
+.animate-on-scroll.from-right {
+  transform: translateX(40px);
+}
+
+.animate-on-scroll.from-right.fade-in {
+  transform: translateX(0);
+}

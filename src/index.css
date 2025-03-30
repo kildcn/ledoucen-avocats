@@ -1,5 +1,5 @@
 /* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,19 +12,39 @@
   --text-light: #4b5563; /* Gray-600 */
 }
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set headings to serif font */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Container consistent width */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Custom transitions */
 .transition-colors {
   transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
 }
 
 /* Custom animations */
@@ -37,7 +57,34 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+/* Form styling refinements */
+input, textarea {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+/* Elegant focus styles */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+}
+
+/* Background placeholder for hero section */
+.bg-hero-placeholder {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23333333'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom utility classes */
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-sans {
+  font-family: 'Montserrat', sans-serif;
 }
