@@ -1,3 +1,4 @@
+// src/components/Header.jsx
 import { useState, useEffect } from 'react';
 
 function Header() {
