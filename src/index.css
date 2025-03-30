@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1e3a8a; /* Blue-900 */
+  --primary-color: #C8102E; /* Red-900 - Changed from Blue-900 */
   --secondary-color: #f3f4f6; /* Gray-100 */
   --text-color: #1f2937; /* Gray-800 */
   --text-light: #4b5563; /* Gray-600 */
@@ -93,7 +93,7 @@ button {
 /* Elegant focus styles */
 input:focus, textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.2); /* Updated to red */
 }
 
 /* Background placeholder for hero section */

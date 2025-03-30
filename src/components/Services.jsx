@@ -2,7 +2,7 @@ function Services() {
   const expertiseAreas = [
     {
       title: "Droit Civil",
-      description: "Contrats, responsabilité civile, droit des obligations, litiges entre particuliers.",
+      description: "Droit des contrats, droit de la construction, droit des biens et des personnes, droit de la propriété (bornage, servitude, etc.).",
       icon: "⚖️"
     },
     {
@@ -11,24 +11,24 @@ function Services() {
       icon: "📜"
     },
     {
-      title: "Droit du Travail",
-      description: "Contrats de travail, licenciements, négociations collectives, contentieux prud'homaux.",
-      icon: "👥"
-    },
-    {
       title: "Protection Sociale",
       description: "Sécurité sociale, assurances, prévoyance, retraites, contentieux de la sécurité sociale.",
       icon: "🛡️"
     },
     {
-      title: "Droit Commercial",
-      description: "Contrats commerciaux, baux commerciaux, fonds de commerce, sociétés.",
+      title: "Droit de la Réparation du Dommage Corporel",
+      description: "Indemnisation des préjudices corporels, expertises médicales, recours contre tiers responsables.",
+      icon: "🩺"
+    },
+    {
+      title: "Recouvrement de Créances",
+      description: "Procédures de recouvrement, mise en demeure, injonctions de payer, saisies.",
       icon: "💼"
     },
     {
-      title: "Droit de la Famille",
-      description: "Divorce, séparation, garde d'enfants, successions, régimes matrimoniaux.",
-      icon: "👨‍👩‍👧"
+      title: "Droit des Successions",
+      description: "Règlement des successions, héritages, donations, testaments.",
+      icon: "📋"
     }
   ];
 
@@ -39,9 +39,9 @@ function Services() {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6 animate-on-scroll from-bottom animate-section-title">
             Nos Domaines d'Expertise
           </h2>
-          <div className="h-1 w-20 bg-blue-900 mx-auto mb-6 animate-on-scroll from-bottom animate-section-divider"></div>
+          <div className="h-1 w-20 bg-red-900 mx-auto mb-6 animate-on-scroll from-bottom animate-section-divider"></div>
           <p className="text-gray-600 max-w-2xl mx-auto animate-on-scroll from-bottom animate-section-text">
-            Notre cabinet vous propose une expertise reconnue dans plusieurs domaines du droit, avec une approche personnalisée et rigoureuse.
+            Le Cabinet Le Doucen Avocats propose une expertise reconnue dans plusieurs domaines du droit, avec une approche personnalisée et rigoureuse.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ function Services() {
             <div key={index} className="law-card bg-white p-8 rounded-sm shadow-md hover-scale animate-card">
               <div className="text-3xl mb-4">{area.icon}</div>
               <h3 className="text-xl font-serif font-semibold text-gray-800 mb-3">{area.title}</h3>
-              <div className="h-0.5 w-12 bg-blue-900 mb-4"></div>
+              <div className="h-0.5 w-12 bg-red-900 mb-4"></div>
               <p className="text-gray-600">{area.description}</p>
             </div>
           ))}

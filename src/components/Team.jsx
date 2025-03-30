@@ -2,9 +2,9 @@ function Team() {
   const team = [
     {
       name: "Yann Le Doucen",
-      role: "Avocat Fondateur",
-      description: "Expert en droit du travail et protection sociale. Membre du Barreau de Rodez depuis 1993.",
-      expertise: ["Droit du travail", "Protection sociale", "Contentieux"],
+      role: "Avocat - Ancien Bâtonnier",
+      description: "Expert en droit et procédure civile. Membre du Barreau de l'Aveyron depuis 1993.",
+      expertise: ["Droit civil", "Construction", "Succession", "Droit des contrats", "Recouvrement des créances", "Droit de propriété et des biens"],
       image: "https://images.ladepeche.fr/api/v1/images/view/5c2646ba3e4546162545b830/full/image.jpg"
     }
   ];
@@ -14,9 +14,9 @@ function Team() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6">Notre Équipe</h2>
-          <div className="h-1 w-20 bg-blue-900 mx-auto mb-6"></div>
+          <div className="h-1 w-20 bg-red-900 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Rencontrez notre équipe d'avocats expérimentés, dédiés à vous offrir le meilleur service juridique.
+            Rencontrez l'équipe d'avocats expérimentés du Cabinet Le Doucen Avocats, dédiée à vous offrir le meilleur service juridique.
           </p>
         </div>
 
@@ -44,12 +44,12 @@ function Team() {
                   <h3 className="text-2xl font-serif font-semibold text-gray-800 mb-1">
                     Me {member.name}
                   </h3>
-                  <p className="text-blue-900 font-medium mb-4">{member.role}</p>
-                  <div className="h-0.5 w-12 bg-blue-900 mb-4"></div>
+                  <p className="text-red-900 font-medium mb-4">{member.role}</p>
+                  <div className="h-0.5 w-12 bg-red-900 mb-4"></div>
                   <p className="text-gray-600 mb-4">{member.description}</p>
 
                   <div className="mb-4">
-                    <h4 className="text-sm uppercase tracking-wider text-gray-500 mb-2">Spécialités</h4>
+                    <h4 className="text-sm uppercase tracking-wider text-gray-500 mb-2">Domaines d'activité</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.expertise.map((item, i) => (
                         <span key={i} className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded-sm">

@@ -1,5 +1,6 @@
 // src/components/Header.jsx
 import { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,8 +19,13 @@ function Header() {
     <header className={`transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`} style={{ position: 'fixed', width: '100%', top: 0, left: 0, right: 0, zIndex: 9999 }}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center">
+          <Logo
+            className="mr-3"
+            color={scrolled ? '#C8102E' : 'white'}
+            size="small"
+          />
           <h1 className={`text-2xl font-serif font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>
-            Le Doucen Avocats
+            LE DOUCEN AVOCATS
           </h1>
         </div>
 
@@ -29,7 +35,7 @@ function Header() {
             <a
               key={index}
               href={`#${['accueil', 'cabinet', 'services', 'equipe', 'contact'][index]}`}
-              className={`font-medium ${scrolled ? 'text-gray-800 hover:text-blue-900' : 'text-white hover:text-gray-200'} transition-colors`}
+              className={`font-medium ${scrolled ? 'text-gray-800 hover:text-red-900' : 'text-white hover:text-gray-200'} transition-colors`}
             >
               {item}
             </a>
@@ -56,7 +62,7 @@ function Header() {
               <a
                 key={index}
                 href={`#${['accueil', 'cabinet', 'services', 'equipe', 'contact'][index]}`}
-                className="text-gray-800 hover:text-blue-900 transition-colors font-medium"
+                className="text-gray-800 hover:text-red-900 transition-colors font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}

@@ -22,7 +22,7 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: #1e3a8a;
+  background-color: #C8102E; /* Changed from blue to red */
 }
 
 /* Refined transitions */
@@ -41,7 +41,7 @@
 }
 
 .law-card:hover {
-  border-color: #1e3a8a;
+  border-color: #C8102E; /* Changed from blue to red */
   transform: translateY(-5px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
@@ -103,4 +103,43 @@ main, section, footer, .page-transition {
 img {
   max-width: 100% !important;
   height: auto !important;
+}
+
+/* Fix for preventing unwanted scroll on sections */
+section {
+  overflow: visible !important;
+}
+
+.container,
+.container > div,
+.container > div > div {
+  overflow: visible !important;
+}
+
+/* Fix for animation classes that might be causing overflow issues */
+.animate-on-scroll {
+  overflow: visible !important;
+}
+
+/* Make sure no elements are creating their own scrollable context */
+.from-left,
+.from-right,
+.from-bottom {
+  overflow: visible !important;
+}
+
+/* Ensuring the main container doesn't create unnecessary scrollbars */
+#root,
+.app,
+main {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+
+/* Target specific issues in the About section */
+#cabinet .container,
+#cabinet .flex,
+#cabinet .md\:w-1\/2,
+#cabinet .relative {
+  overflow: visible !important;
 }

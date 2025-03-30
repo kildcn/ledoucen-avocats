@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        blue: {
-          900: '#1e3a8a', // Primary color
+        red: {
+          900: '#C8102E', // New primary color
         },
       },
       fontFamily: {
