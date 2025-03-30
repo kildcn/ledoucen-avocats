@@ -6,7 +6,7 @@ Ce dépôt contient le code source du site web officiel du Cabinet Le Doucen Avo
 
 Le site web est développé avec React et Vite, utilisant TailwindCSS pour le style. Il s'agit d'un site vitrine présentant les services, l'équipe et les coordonnées du cabinet d'avocats.
 
-![Screenshot du site]([screenshot-placeholder.jpg](https://i.postimg.cc/4ZXzG67x/Screenshot-2025-03-30-at-21-10-20.png))
+![Screenshot du site](https://i.postimg.cc/4ZXzG67x/Screenshot-2025-03-30-at-21-10-20.png)
 
 ## 🛠️ Technologies Utilisées
 
