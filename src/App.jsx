@@ -22,29 +22,46 @@ function App() {
 
     const timer = setTimeout(() => {
       document.body.style.overflow = 'auto';
+      document.body.style.overflowX = 'hidden'; // Ensure horizontal scrolling is always disabled
     }, 2500);
 
     return () => {
       clearTimeout(timer);
       document.body.style.overflow = 'auto';
+      document.body.style.overflowX = 'hidden'; // Ensure horizontal scrolling is always disabled
     };
   }, []);
 
+  // Fix for mobile - ensure no horizontal scrollbar
+  useEffect(() => {
+    const fixViewport = () => {
+      document.documentElement.style.overflowX = 'hidden';
+      document.body.style.overflowX = 'hidden';
+
+      // Force reflow to apply changes
+      document.body.getBoundingClientRect();
+    };
+
+    fixViewport();
+    window.addEventListener('resize', fixViewport);
+
+    return () => window.removeEventListener('resize', fixViewport);
+  }, []);
+
   return (
-    <div className="app">
+    <div className="app" style={{ width: '100%', overflowX: 'hidden' }}>
       <IntroAnimation />
-      {/* Using inline styles to ensure header is above other content */}
-      <div className="animate-header" style={{ position: 'relative', zIndex: 9999 }}>
+      <div className="animate-header" style={{ position: 'relative', zIndex: 9999, width: '100%', overflowX: 'hidden' }}>
         <Header />
       </div>
-      <main style={{ position: 'relative', zIndex: 1, marginTop: '0px', paddingTop: '0px' }}>
+      <main style={{ position: 'relative', zIndex: 1, marginTop: '0px', paddingTop: '0px', width: '100%', overflowX: 'hidden' }}>
         <Hero />
         <About />
         <Services />
         <Team />
         <Contact />
       </main>
-      <Footer style={{ position: 'relative', zIndex: 1 }} />
+      <Footer style={{ position: 'relative', zIndex: 1, width: '100%', overflowX: 'hidden' }} />
     </div>
   );
 }

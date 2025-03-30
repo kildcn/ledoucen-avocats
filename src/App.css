@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   text-align: left;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Custom styles for the law firm */
@@ -54,11 +55,15 @@ header {
   right: 0 !important;
   width: 100% !important;
   z-index: 9999 !important; /* Extremely high z-index to override everything */
+  overflow-x: hidden !important; /* Prevent horizontal scrollbar */
 }
 
 /* All other sections should have lower z-index */
 main, section, footer, .page-transition {
   z-index: 1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 /* Only the intro animation should be above the header */
@@ -79,4 +84,23 @@ main, section, footer, .page-transition {
 .animate-section-text,
 .animate-card {
   z-index: 1 !important;
+}
+
+/* Fix for mobile view - ensure no elements overflow horizontally */
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.app {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Fix for images in mobile */
+img {
+  max-width: 100% !important;
+  height: auto !important;
 }

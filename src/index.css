@@ -12,17 +12,29 @@
   --text-light: #4b5563; /* Gray-600 */
 }
 
+/* Fix for mobile overflow - prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
 }
 
 /* Fix for header positioning - critical CSS here */
@@ -45,6 +57,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Custom transitions */
@@ -106,9 +120,24 @@ input:focus, textarea:focus {
 /* Ensure the hero section spans full viewport height and starts right at the top */
 .app {
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+
+/* Fix for mobile view */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for any overflowing elements in mobile */
+section, footer, header, .page-transition {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
